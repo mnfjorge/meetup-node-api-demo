@@ -1,0 +1,43 @@
+version: 2.1
+jobs:
+  security-checks:
+    docker:
+      - image: docker:stable
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          command: docker run --rm -v $PWD:/target hawkeyesec/scanner-cli
+  
+  tests:
+    docker:
+      - image: node:11-alpine
+    steps:
+      - checkout
+      - run:
+          command: npm install
+      - run:
+          command: npm run test
+
+  deploy:
+    working_directory: ~/repo
+    docker:
+      - image: docker:stable-git
+    steps:
+      - checkout
+      - run:
+          command: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD:refs/heads/master
+
+workflows:
+  build-test-deploy:
+    jobs:
+      - security-checks
+      - tests:
+          requires:
+            - security-checks
+      - deploy:
+          requires:
+            - tests
+          filters:
+            branches:
+              only: master
