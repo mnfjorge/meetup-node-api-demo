@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Suco de melancia com gengibre, limão e hortelã",
+    "description": "Aprenda a fazer refresco que combina com diversas refeições",
+    "ingredients": [
+      "1 jarra de suco de melancia",
+      "3 limões",
+      "3 fatias de melancia",
+      "1 maço de hortelãs",
+      "1 colher de café de gengibre ralado",
+      "Gelo"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Pernil com molho de abacaxi",
+    "description": "Receita ainda leva pimentão na pressão; confira o passo a passo",
+    "ingredients": [
+      "1,5 kg de pernil suíno em peça sem osso",
+      "1 abacaxi",
+      "1 pimentão vermelho",
+      "1 xícara (chá) de cachaça",
+      "2 cebolas",
+      "3 dentes de alho",
+      "1 pimenta dedo-de-moça",
+      "3 colheres (sopa) de azeite",
+      "2 folhas de louro",
+      "2 colheres (chá) de cominho em pó",
+      "1 colher (sopa) de sal",
+      "pimenta-do-reino em grãos moída na hora a gosto",
+      "folhas de coentro a gosto"
+    ]
+  }
+]
